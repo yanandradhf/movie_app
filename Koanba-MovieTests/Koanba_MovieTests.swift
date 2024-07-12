@@ -10,27 +10,59 @@ import XCTest
 
 final class Koanba_MovieTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    var viewController: HomeViewController!
+        var window: UIWindow!
+        
+        override func setUp() {
+            super.setUp()
+            
+            viewController = HomeViewController()
+            viewController.viewModel = MoviesViewModel()
+            
+            window = UIWindow()
+            window.rootViewController = viewController
+            window.makeKeyAndVisible()
+            
+            viewController.loadViewIfNeeded()
+            viewController.viewWillAppear(false)
+            viewController.viewDidAppear(false)
         }
+        
+        override func tearDown() {
+            viewController = nil
+            window = nil
+            super.tearDown()
+        }
+        
+        func testTableViewDataSource() {
+        
+            let dummyMovies = [
+                Movie(id: 1, title: "The Conjuring", overview: "Seram banget", releaseDate: "2018-2-20", posterPath: "/Conjuring.jpg", genreNames: ["Horror", "Drama"]),
+                Movie(id: 2, title: "Love Heart", overview: "Hati Hati", releaseDate: "2019-03-10", posterPath: "/Heart.jpg", genreNames: ["Drama"])
+            ]
+            
+           
+            viewController.viewModel.movies = dummyMovies
+            viewController.movieResultsTable.reloadData()
+            viewController.movieResultsTable.layoutIfNeeded()
+            
+            
+            let expectation = self.expectation(description: "Wait for table view to reload")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                expectation.fulfill()
+            }
+            
+            waitForExpectations(timeout: 2, handler: nil)
+            
+               let numberOfRows = viewController.tableView(viewController.movieResultsTable, numberOfRowsInSection: 0)
+               XCTAssertEqual(numberOfRows, 2, "Number of rows in table view should be 2")
+               
+               guard let cell = viewController.movieResultsTable.cellForRow(at: IndexPath(row: 0, section: 0)) as? CustomTableViewCell else {
+                   XCTFail("Cell is not of type CustomTableViewCell")
+                   return
+               }
+               XCTAssertEqual(cell.titleLabel.text, "The Conjuring", "The first cell's text should be 'The Conjuring'")
+               
+           }
     }
-
-}

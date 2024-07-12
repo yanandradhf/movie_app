@@ -19,7 +19,7 @@
 		DF15790E2C3DACEC009CDEBD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15790D2C3DACEC009CDEBD /* CustomTableViewCell.swift */; };
 		DF1703A72C3FF5E3006054FA /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1703A62C3FF5E3006054FA /* NetworkChecker.swift */; };
 		DF1EC2822C3EC03A00F90740 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EC2812C3EC03A00F90740 /* DetailsViewController.swift */; };
-		DF1EC2842C3EC6C900F90740 /* customImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EC2832C3EC6C900F90740 /* customImageView.swift */; };
+		DF1EC2842C3EC6C900F90740 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EC2832C3EC6C900F90740 /* CustomImageView.swift */; };
 		DF1EC2872C3ED05B00F90740 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EC2862C3ED05B00F90740 /* DetailViewModel.swift */; };
 		DF1EC2892C3EE20D00F90740 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EC2882C3EE20D00F90740 /* CastCollectionViewCell.swift */; };
 		DF1EC28C2C3F049900F90740 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EC28B2C3F049900F90740 /* Extension.swift */; };
@@ -63,7 +63,7 @@
 		DF15790D2C3DACEC009CDEBD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		DF1703A62C3FF5E3006054FA /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		DF1EC2812C3EC03A00F90740 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		DF1EC2832C3EC6C900F90740 /* customImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customImageView.swift; sourceTree = "<group>"; };
+		DF1EC2832C3EC6C900F90740 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		DF1EC2862C3ED05B00F90740 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		DF1EC2882C3EE20D00F90740 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF1EC28B2C3F049900F90740 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		DF15790A2C3D8D14009CDEBD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DF1EC2832C3EC6C900F90740 /* customImageView.swift */,
+				DF1EC2832C3EC6C900F90740 /* CustomImageView.swift */,
 				DF1EC2882C3EE20D00F90740 /* CastCollectionViewCell.swift */,
 			);
 			path = View;
@@ -413,7 +413,7 @@
 				DF1578DB2C3D7FEE009CDEBD /* Koanba_Movie.xcdatamodeld in Sources */,
 				DF1EC2892C3EE20D00F90740 /* CastCollectionViewCell.swift in Sources */,
 				DFF80D272C3E42600014C809 /* HomeViewModel.swift in Sources */,
-				DF1EC2842C3EC6C900F90740 /* customImageView.swift in Sources */,
+				DF1EC2842C3EC6C900F90740 /* CustomImageView.swift in Sources */,
 				DF15790E2C3DACEC009CDEBD /* CustomTableViewCell.swift in Sources */,
 				DFF80D1F2C3E3ABD0014C809 /* Model.swift in Sources */,
 				DFF80D212C3E3D430014C809 /* NetworkManager.swift in Sources */,

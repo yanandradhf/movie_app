@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     let movieResultsTable = UITableView()
     let searchController = UISearchController()
-    let viewModel = MoviesViewModel()
+    var viewModel = MoviesViewModel()
     let refreshControl = UIRefreshControl()
     private var cancellables = Set<AnyCancellable>()
     var query = ""
